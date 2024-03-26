@@ -19,9 +19,14 @@ const endpoints = {
   }
 
   function getAutocompleteHandler(data) {
+    const NUM_AUTOCOMPLETE_RESULTS = 10
+
     const results = [];
-    for (let i = 0; i < 10; i++) {
-      results.push("asdf");
+    for (let i = 0; i < NUM_AUTOCOMPLETE_RESULTS; i++) {
+      results.push({
+        suggestions: data + "asdf",
+        auxiliary: "asdf"
+    });
     }
     return results
   }
